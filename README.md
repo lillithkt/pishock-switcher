@@ -1,12 +1,5 @@
-# Lillith's Template
+# PiShock-Switcher
 
-My template for server projects
+A simple program to swap between pishock and openshock easily, while saving settings!
 
-## Contains:
-
-- Typescript
-- Esbuild Single-File output
-- ESLint
-- Two Stage Docker build for minimum download size
-- GHCR Upload for the docker image
-- c/i For linting and testing compiling
+exe coming soon™

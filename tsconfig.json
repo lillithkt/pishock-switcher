@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "baseUrl": "./src",
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   }
 }

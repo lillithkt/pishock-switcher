@@ -7,6 +7,7 @@ esbuild.build({
   platform: "node",
   target: ["node21"],
   sourcemap: true,
+  external: ["serialport"],
   loader: {
     ".node": "copy",
   },
