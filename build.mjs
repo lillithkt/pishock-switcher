@@ -17,7 +17,7 @@ import { exec } from "pkg";
 
   if (process.argv.includes("--exe")) {
     console.log("Packaging...");
-    await exec(["package.json", "--output", "dist/PiShock-ButtplugIO.exe"]);
+    await exec(["package.json", "--output", "dist/PiShock-Switcher.exe"]);
   }
   console.log("Done!");
 })();
