@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/dist/index.js",
+      "request": "launch",
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "preLaunchTask": "${defaultBuildTask}"
+    }
+  ]
+}
