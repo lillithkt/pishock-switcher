@@ -13,6 +13,7 @@
     "test": "tsc --noEmit && eslint .",
     "lint": "eslint ."
   },
+  "bin": "dist/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
