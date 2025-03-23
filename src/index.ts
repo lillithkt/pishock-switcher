@@ -319,7 +319,9 @@ export class Device {
       );
       if (!shouldLoadData) return;
       setSpinnerState(State.Restoring);
-      const data = JSON.parse(readFileSync(savePath).toString());
+      const data: iTerminalInfo["networks"] | iJsonConfig = JSON.parse(
+        readFileSync(savePath).toString()
+      );
       switch (type) {
         case BoardFirmware.OPENSHOCK:
           log.debug("sending jsonconfig " + JSON.stringify(data));
@@ -327,7 +329,7 @@ export class Device {
           break;
         case BoardFirmware.PISHOCK:
           // FIXME: waiting on pishock support on if its okay to rapid fire this or not
-          for (const network of data.networks) {
+          for (const network of data as iTerminalInfo["networks"]) {
             this.sendCommand({
               cmd: SerialCommandEnum.ADDNETWORK,
               value: network,
