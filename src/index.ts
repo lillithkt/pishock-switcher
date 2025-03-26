@@ -30,7 +30,7 @@ export enum BoardFirmware {
   PISHOCK = "PiShock",
   OPENSHOCK = "OpenShock",
 }
-
+process.removeAllListeners("warning"); // suppress warnings in exe
 const PISHOCK_VID = "1A86";
 const PISHOCK_PID = "7523";
 const TERMINALINFO_REGEX = /(?<=TERMINALINFO: )\{.*ownerId":\d+\}/;

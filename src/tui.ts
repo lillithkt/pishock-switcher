@@ -1,8 +1,8 @@
 import kleur, { Color } from "kleur";
 import log from "logs";
-import ora from "ora";
 import prompts from "prompts";
-import device, { BoardFirmware } from "./";
+import yoctoSpinner from "yocto-spinner";
+import device, { BoardFirmware } from ".";
 
 export enum State {
   FindingHub = "Finding Hub",
@@ -14,9 +14,10 @@ export enum State {
   Saving = "Saving Data",
   Restoring = "Restoring Data",
   WaitingForRestart = "Waiting For Restart",
+  GettingShockerInfo = "Getting Shocker Info",
 }
 
-export const spinner = ora();
+export const spinner = yoctoSpinner();
 
 export const PromptsOptions = { onCancel: () => process.exit(1) };
 
